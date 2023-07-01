@@ -1,0 +1,35 @@
+<!--
+ * @Author: mouse
+ * @Date: 2023-06-13 14:29:30
+ * @LastEditTime: 2023-06-17 01:02:34
+ * @LastEditors: mouse
+ * @Description: 
+ * @FilePath: /telegram_demo/index.html
+ * @project: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <script defer src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vite App</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+  <script type="application/javascript">
+    if (window.Telegram) {
+      Telegram.WebApp.expand();
+      Telegram.WebApp.enableClosingConfirmation()
+      console.log(Telegram.WebApp.initDataUnsafe);
+      // Telegram.WebApp.showAlert('当前用户id:' + Telegram.WebApp.initDataUnsafe.user.id);
+    }
+
+  </script>
+</body>
+
+</html>
